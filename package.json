@@ -1,0 +1,34 @@
+{
+  "name": "derive-password-bytes",
+  "version": "0.0.1",
+  "description": "A partial implementation of the C# System.Security.Cryptography.PasswordDeriveBytes class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jheys/derive-password-bytes.git"
+  },
+  "keywords": [
+    "C#",
+    "Mono",
+    ".Net",
+    "Unity",
+    "PasswordDeriveBytes",
+    "password",
+    "derive",
+    "bytes",
+    "buffer",
+    "node",
+    "crypto"
+  ],
+  "author": "Jim Heys <jheys@swerv.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/jheys/derive-password-bytes/issues"
+  },
+  "homepage": "https://github.com/jheys/derive-password-bytes#readme",
+  "dependencies": {
+  }
+}
