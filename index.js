@@ -12,13 +12,13 @@ const crypto = require('crypto');
  * @param len {int} The desired key length (number of bytes)
  * @return {buffer}
  */
-module.exports = (password, salt, iterations, hash, len) => {
+const derp = (password, salt, iterations, hash, len) => {
     let key = Buffer.concat([Buffer(password), Buffer(salt)]);
     for (let i = 0; i < iterations; i++) {
         key = crypto.createHash(hash).update(key).digest();
     }
     if (key.length < len) {
-        const hx = getKeyBuffer(password, salt, 1, hash);
+        const hx = derp(password, salt, 1, hash);
         let counter = 0;
         while (key.length < len) {
             counter++;
@@ -29,3 +29,5 @@ module.exports = (password, salt, iterations, hash, len) => {
     }
     return key;
 };
+
+module.exports = derp;
